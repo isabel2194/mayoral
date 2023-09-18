@@ -1,0 +1,128 @@
+{
+  "products": [
+    {
+      "sku":"asdasda-1",
+      "price":30.99,
+      "currency":"€",
+      "offer_percentage":10,
+      "name":"Polo cuello mao bandas Better Cotton",
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "image":"/product1.avif",
+      "variants":[
+        {
+          "sku":"asdasda-11",
+          "price":30.99,
+          "currency":"€",
+          "image":"https://via.placeholder.com/150",
+          "color":"red"
+        },
+        {
+          "sku":"asdasda-12",
+          "price":30.99,
+          "currency":"€",
+          "image":"https://via.placeholder.com/150",
+          "color":"blue"
+        }
+      ]
+    },
+    {
+      "sku":"product-sku-2",
+      "price":29.99,
+      "currency":"€",
+      "offer_percentage": null,
+      "name":"Polo capucha Better Cotton",
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "image":"/product2.avif",
+      "variants":[]
+    },
+    {
+      "sku":"product-sku-3",
+      "price":29.99,
+      "currency":"€",
+      "offer_percentage": null,
+      "name":"Polo cuello mao rayas Better Cotton",
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "image":"/product3.avif",
+      "variants":[
+        {
+          "sku":"asdasda-11",
+          "price":30.99,
+          "currency":"€",
+          "image":"https://via.placeholder.com/150",
+          "color":"red"
+        },
+        {
+          "sku":"asdasda-12",
+          "price":30.99,
+          "currency":"€",
+          "image":"https://via.placeholder.com/150",
+          "color":"blue"
+        }
+      ]
+    },
+    {
+      "sku":"product-sku-4",
+      "price":29.99,
+      "currency":"€",
+      "offer_percentage": 20,
+      "name":"Polo cuello mao banda Better Cotton",
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "image":"/product4.avif",
+      "variants":[]
+    },{
+      "sku":"product-sku-5",
+      "price":29.99,
+      "currency":"€",
+      "offer_percentage": null,
+      "name":"Polo flamé Better Cotton",
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "image":"/product5.avif",
+      "variants":[]
+    },{
+      "sku":"product-sku-6",
+      "price":29.99,
+      "currency":"€",
+      "offer_percentage": null,
+      "name":"Polo rayas Better Cotton",
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "image":"/product6.avif",
+      "variants":[]
+    },{
+      "sku":"product-sku-7",
+      "price":29.99,
+      "currency":"€",
+      "offer_percentage": null,
+      "name":"Polo banda Better Cotton",
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "image":"/product7.avif",
+      "variants":[]
+    },{
+      "sku":"product-sku-8",
+      "price":29.99,
+      "currency":"€",
+      "offer_percentage": null,
+      "name":"Polo banda Better Cotton",
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "image":"/product8.avif",
+      "variants":[]
+    },{
+      "sku":"product-sku-9",
+      "price":13.99,
+      "currency":"€",
+      "offer_percentage": 50,
+      "name":"Polo de manga corta en algodón sostenible",
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "image":"/product9.avif",
+      "variants":[]
+    },{
+      "sku":"product-sku-10",
+      "price":14.99,
+      "currency":"€",
+      "offer_percentage": 50,
+      "name":"Polo granito cuello mao",
+      "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
+      "image":"/product10.avif",
+      "variants":[]
+    }
+  ]
+}
