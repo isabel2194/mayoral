@@ -2,7 +2,7 @@ import FormControl from "@mui/material/FormControl"
 import TextField from "@mui/material/TextField";
 import SearchIcon from "@mui/icons-material/Search";
 import InputAdornment from "@mui/material/InputAdornment";
-import styles from "./Searcher.module.css";
+import style from "./Searcher.module.css";
 
 type Props = {
   search: (search: string) => void;
@@ -15,7 +15,7 @@ const Searcher = ({search}: Props) => {
   };
 
   return (
-    <FormControl className={styles.container} variant="outlined">
+    <FormControl className={style.container} variant="outlined">
       <TextField
         id="search-element"
         type="text"

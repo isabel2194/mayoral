@@ -14,7 +14,7 @@ const Product = ({ name, price, currency, offer_percentage, image, variants }: P
   return (
     <div className={style.container}>
       <Image src={image} alt={name} height={358} width={256} />
-      <h2 className={style.name}>{name}</h2>
+      <h2 className={style.product_name}>{name}</h2>
       <div className={style.product_price}>
         <span className={`${style.price} ${(offer_percentage > 0 && style.original_price)}`}>
           {showPrice(price)}

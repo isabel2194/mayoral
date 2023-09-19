@@ -30,17 +30,3 @@ h2{
   font-size: 15px;
   font-weight: 500;
 }
-
-.header{
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  @media (max-width: 768px) {
-    border-bottom: 1px solid #eaeaea;
-    flex-direction: column-reverse;
-    .header-button-actions{
-      margin-bottom: 5px;
-    }
-  }
-}

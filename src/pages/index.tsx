@@ -2,14 +2,11 @@ import { useEffect, useState } from "react";
 import { NextPage } from "next";
 import useSWR from "swr";
 import CircularProgress from "@mui/material/CircularProgress";
-import AddIcon from '@mui/icons-material/Add';
-import RemoveIcon from '@mui/icons-material/Remove';
-import IconButton from "@mui/material/IconButton";
+import Header from "components/Header";
 import Layout from "components/Layout";
 import Grid from "components/Grid";
 import Product from "components/Product";
 import EmptyMessage from "components/EmptyMessage";
-import Searcher from "components/Searcher";
 import { ELEMENTS_BY_ROW } from "utils/utils";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
@@ -49,17 +46,7 @@ const HomePage: NextPage = () => {
   if (!data) return <CircularProgress />;
 
   return <Layout>
-    <div className="header">
-      <Searcher search={handleSearch} />
-      <div className="header-button-actions">
-        <IconButton aria-label="ver menos productos por fila" onClick={() => changeView(elementsRow - 1)} disabled={elementsRow === ELEMENTS_BY_ROW.ROW_SMALL}>
-          <RemoveIcon />
-        </IconButton>
-        <IconButton aria-label="ver más productos por fila" onClick={() => changeView(elementsRow + 1)} disabled={elementsRow === ELEMENTS_BY_ROW.ROW_NORMAL}>
-          <AddIcon />
-        </IconButton>
-      </div>
-    </div>
+    <Header handleSearch={handleSearch} changeView={changeView} elements={elementsRow} />
     {filteredProducts?.length > 0 ?
       <Grid elementsByRow={elementsRow}>
         {filteredProducts?.map((product) => (

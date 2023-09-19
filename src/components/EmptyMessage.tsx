@@ -1,12 +1,12 @@
 import SentimentDissatisfiedIcon from "@mui/icons-material/SentimentDissatisfied";
 import Stack from '@mui/material/Stack';
-import styles from "./EmptyMessage.module.css"; 
+import style from "./EmptyMessage.module.css"; 
 
 const EmptyMessage = () => {
   return (
-    <Stack direction="row" justifyContent="center" alignItems="center" className={styles.container}>
+    <Stack direction="row" justifyContent="center" alignItems="center" className={style.container}>
       <SentimentDissatisfiedIcon/>
-      <p className={styles.message}> No hay productos disponibles.</p>
+      <p className={style.message}> No hay productos disponibles.</p>
     </Stack>
   )
 }
