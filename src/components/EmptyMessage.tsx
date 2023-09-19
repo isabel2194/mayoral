@@ -6,7 +6,7 @@ const EmptyMessage = () => {
   return (
     <Stack direction="row" justifyContent="center" alignItems="center" className={styles.container}>
       <SentimentDissatisfiedIcon/>
-      <p className={styles.message}> There are no products.</p>
+      <p className={styles.message}> No hay productos disponibles.</p>
     </Stack>
   )
 }

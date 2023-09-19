@@ -1,0 +1,5 @@
+export const ELEMENTS_BY_ROW={
+  ROW_NORMAL: 5,
+  ROW_MEDIUM:4,
+  ROW_SMALL:3
+};

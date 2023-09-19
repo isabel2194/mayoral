@@ -1,6 +1,10 @@
 import style from "./Layout.module.css";
 
-const Layout = ({children}) => {
+type Props = {
+  children: React.ReactNode;
+};
+
+const Layout = ({children}: Props) => {
   return (
     <div className={style.container}>{children}</div>
   )

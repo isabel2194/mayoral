@@ -2,27 +2,24 @@ import Image from "next/image";
 import Button from "@mui/material/Button";
 import style from "./Product.module.css";
 
+const Product = ({ name, price, currency, offer_percentage, image, variants }: Product) => {
 
-const Product = ({name, price, currency, offer_percentage, image, variants}) => {
-
-  const calculateOfferedPrice = () => { 
-    const priceNumber = parseFloat(price);
-    const offerPercentageNumber = parseFloat(offer_percentage);
-    const offeredPrice = priceNumber - (priceNumber * offerPercentageNumber / 100);
-    return offeredPrice.toFixed(2);
+  const calculateOfferedPrice = (): number => {
+    const offeredPrice = price - (price * offer_percentage / 100);
+    return parseFloat(offeredPrice.toFixed(2));
   };
 
-  const showPrice = (quantity) => quantity+currency;
+  const showPrice = (quantity: number): string => quantity + currency;
 
   return (
     <div className={style.container}>
-      <Image src={image} alt={name} height={358} width={256}/>
+      <Image src={image} alt={name} height={358} width={256} />
       <h2 className={style.name}>{name}</h2>
       <div className={style.product_price}>
         <span className={`${style.price} ${(offer_percentage > 0 && style.original_price)}`}>
           {showPrice(price)}
         </span>
-        {offer_percentage && 
+        {offer_percentage &&
           <span className={`${style.price} ${style.offered_price}`}>
             {showPrice(calculateOfferedPrice())} (-{offer_percentage}%)
           </span>
