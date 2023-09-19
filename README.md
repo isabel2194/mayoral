@@ -1,25 +1,24 @@
-# Mayoral Frontend Assignment
+# Mayoral
 
-|  Desktop | Mobile |
-|:--------:|:------:|
-| ![Desktop](./.github/desktop.png) | ![Mobile](./.github/mobile.png)  |
+## Description
+A set of products from an online store is displayed, of which you can perform a search on them and change the size of the grid.
 
-Maquetar las imágenes adjuntas y tener en cuenta los diferentes cortes en móvil y escritorio. La prueba deberá estar subida en un repositorio de GitHub.
+## Getting Started  
 
-Tecnologías/Librerías requeridas:
+Install all dependencies with the command:
 
--	React
--	Typescript
--	Next.js
+```bash
+npm install
+```
 
-Funcionalidad a implementar:
+Build the project with the command:
 
-- Separa en componentes de una forma óptima y organizada
-- La vista debe asemejarse lo más parecido posible a las fotos adjuntas
-- Implementar búsqueda de productos por nombre
-- Consumir un JSON con los datos de productos (JSON local o externo)
-- Cambiar la vista con los iconos indicados en la foto: 
-  - Escritorio de 4 a 3 elementos
-  - Móvil de 3 a 2 elementos
-- Implementar lógica y diseño de un componente “ordenar” (precio ascendente y descendente)
-- Crea los test unitarios que creas conveniente
+```bash
+npm run build
+```
+
+Run the project with the command:
+
+```bash
+npm run dev
+```
