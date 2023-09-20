@@ -7,7 +7,7 @@
       "offer_percentage":10,
       "name":"Polo cuello mao bandas Better Cotton",
       "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "image":"/product1.avif",
+      "image":"/product10.avif",
       "variants":[
         {
           "sku":"asdasda-11",
@@ -32,7 +32,7 @@
       "offer_percentage": 10,
       "name":"Polo capucha Better Cotton",
       "description":"Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
-      "image":"/product2.avif",
+      "image":null,
       "variants":[]
     },
     {

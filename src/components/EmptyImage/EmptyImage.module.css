@@ -1,0 +1,13 @@
+.container{
+  aspect-ratio: 112/157;
+  max-height: 358px;
+  background-color: #ebebeb;
+  display:flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  align-items:center;
+	.icon{
+		width: 50%;
+		height: 100%;
+	}
+}

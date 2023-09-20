@@ -3,6 +3,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: flex-start;
+
   @media (max-width: 768px) {
     border-bottom: 1px solid #eaeaea;
     flex-direction: column-reverse;

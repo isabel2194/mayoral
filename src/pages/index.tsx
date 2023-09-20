@@ -2,21 +2,20 @@ import { useEffect, useState } from "react";
 import { NextPage } from "next";
 import useSWR from "swr";
 import CircularProgress from "@mui/material/CircularProgress";
-import Header from "components/Header";
-import Layout from "components/Layout";
-import Grid from "components/Grid";
-import Product from "components/Product";
-import EmptyMessage from "components/EmptyMessage";
-import { ELEMENTS_BY_ROW } from "utils/utils";
+import Header from "../components/Header/Header";
+import Layout from "../components/Layout/Layout";
+import Grid from "../components/Grid/Grid";
+import Product from "../components/Product/Product";
+import EmptyMessage from "../components/EmptyMessage/EmptyMessage";
+import { APISEOResponse, Product as ProductData } from "@types";
 
 const fetcher = (url) => fetch(url).then((res) => res.json());
 
 const HomePage: NextPage = () => {
 
-  const { data, error } = useSWR('/api/products', fetcher);
+  const { data, error }: { data: APISEOResponse; error: string;} = useSWR("/api/products", fetcher);
 
-  const [filteredProducts, setFilteredProducts] = useState<Array<Product>>(data?.products);
-  const [elementsRow, setElementsRow] = useState<number>(ELEMENTS_BY_ROW.ROW_NORMAL);
+  const [filteredProducts, setFilteredProducts] = useState<Array<ProductData>>(data?.products);
 
   useEffect(() => {
     setFilteredProducts(data?.products);
@@ -26,29 +25,14 @@ const HomePage: NextPage = () => {
     setFilteredProducts(data.products.filter(product => product.name.toLowerCase().includes(search.toLowerCase())));
   };
 
-  const changeView = (elements: number): void => {
-    if (elements < ELEMENTS_BY_ROW.ROW_SMALL || elements > ELEMENTS_BY_ROW.ROW_NORMAL) return;
-    switch (elements) {
-      case ELEMENTS_BY_ROW.ROW_SMALL:
-        setElementsRow(ELEMENTS_BY_ROW.ROW_SMALL);
-        break;
-      case ELEMENTS_BY_ROW.ROW_MEDIUM:
-        setElementsRow(ELEMENTS_BY_ROW.ROW_MEDIUM);
-        break;
-      default:
-        setElementsRow(ELEMENTS_BY_ROW.ROW_NORMAL);
-        break;
-    };
-  };
-
   if (error) return <div>Failed to load</div>;
 
-  if (!data) return <CircularProgress />;
+  if (!data) return <CircularProgress data-testid="loading"/>;
 
   return <Layout>
-    <Header handleSearch={handleSearch} changeView={changeView} elements={elementsRow} />
+    <Header handleSearch={handleSearch}/>
     {filteredProducts?.length > 0 ?
-      <Grid elementsByRow={elementsRow}>
+      <Grid>
         {filteredProducts?.map((product) => (
           <Product key={product.sku} {...product} />
         ))}

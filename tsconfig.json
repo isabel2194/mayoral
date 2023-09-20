@@ -22,7 +22,13 @@
       "src/@types"
     ],
     "baseUrl": "./src",
-    "incremental": true
+    "incremental": true,
+    "paths": {
+      "app/*": ["./src/*"],
+      "config/*": ["./*"],
+      "helpers/*": ["./src/utils/*"],
+      "tests/*": ["./src/components/*"]
+    }
   },
   "files": [
     "src/@types/graphql.d.ts"

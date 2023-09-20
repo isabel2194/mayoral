@@ -24,7 +24,7 @@ const Searcher = ({search}: Props) => {
         placeholder="Buscar"
         size="small"
         onChange={handleChange}
-        
+        data-testid="searcher"
       />
     </FormControl>
   )
