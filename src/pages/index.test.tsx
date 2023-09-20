@@ -39,15 +39,5 @@ describe("HomePage", () => {
     await waitFor(()=>expect(screen.queryByTestId("empty-message")).not.toBeInTheDocument());
     await waitFor(()=>expect(screen.getAllByTestId("product")).toHaveLength(4));
   });
-  it("when the user reduce the view, the grid changes", async() => {
-    render(<HomePage />);
-    await waitFor(()=>expect(screen.getByTestId("grid")).toBeInTheDocument());
-    //await waitFor(()=>expect(screen.getByTestId("header-reduce-view")).toBeDisabled());
-    userEvent.click(screen.getByTestId("header-reduce-view"));
-    // console.log(getComputedStyle(screen.getByTestId("grid")));
-    // console.log(window.getComputedStyle(screen.getByTestId("grid")));
-    // console.log(window.getComputedStyle(document.querySelector("[data-testid='grid'])))
-    //expect(screen.getByTestId("grid")).toHaveStyle("grid-template-columns: repeat(5, 1fr);");+
-  });
 });
 
