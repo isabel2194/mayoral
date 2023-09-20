@@ -1,7 +1,7 @@
 .container{
   margin: 40px;
   .message{
-    font-size: 15px;
+    font-size: var(--font-size-big);
     line-height: 22px;
     letter-spacing: 0px;
     color: rgb(63, 63, 65);

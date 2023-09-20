@@ -20,5 +20,5 @@ npm run build
 Run the project with the command:
 
 ```bash
-npm run dev
+npm run start
 ```

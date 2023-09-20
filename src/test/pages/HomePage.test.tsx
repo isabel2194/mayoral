@@ -2,9 +2,9 @@ import React from "react";
 import { render, screen, waitForElementToBeRemoved, waitFor } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 import { rest } from "msw";
-import { setupServer } from 'msw/node';
-import HomePage from "./index";
-import productsMock from "./api/__mocks__/products.json";
+import { setupServer } from "msw/node";
+import HomePage from "../../pages/index";
+import productsMock from "../../pages/api/__mocks__/products.json";
 
 
 const server = setupServer(
@@ -12,11 +12,10 @@ const server = setupServer(
     return res(ctx.json(productsMock));
   })
 );
-
-beforeAll(() => server.listen());
-afterAll(() => server.close());
-afterEach(() => server.resetHandlers());
 describe("HomePage", () => {
+  beforeAll(() => server.listen());
+  afterAll(() => server.close());
+  afterEach(() => server.resetHandlers());
   it("is render", async() => {
     render(<HomePage />);
     await waitForElementToBeRemoved(() => screen.getByTestId("loading"));

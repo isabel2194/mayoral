@@ -2,6 +2,8 @@ html {
   --num-of-columns: 5;
   --spacing: 8px;
   --spacing-2: calc(var(--spacing) * 2);
+  --font-size-big: 15px;
+  --font-size-medium: 13px;
 }
 
 html,
@@ -11,7 +13,7 @@ body {
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu,
     Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
   line-height: 1.6;
-  font-size: 18px;
+  font-size: var(--font-size-big);
 }
 
 * {
@@ -33,6 +35,6 @@ img {
 }
 
 h2{
-  font-size: 15px;
+  font-size: var(--font-size-big);
   font-weight: 500;
 }

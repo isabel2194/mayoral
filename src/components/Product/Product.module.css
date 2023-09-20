@@ -24,7 +24,7 @@
     flex-grow: 2;
     margin-bottom: 20px;
     .price{
-      font-size: 13px;
+      font-size: var(--font-size-medium);
       line-height: 18px;
     }
     .original_price{
@@ -42,13 +42,13 @@
     justify-content: flex-end;
     min-height: 75px;
     .more_info{
-      font-size: 13px;
+      font-size: var(--font-size-medium);
       text-align: center;
       margin:0 0 8px 0;
     }
     .add_button{
       margin-top: 10px;
-      font-size: 13px;
+      font-size: var(--font-size-medium);
     }
   }
   @media (max-width: 768px) {
